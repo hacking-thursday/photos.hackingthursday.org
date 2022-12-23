@@ -1,7 +1,12 @@
 build:
-	thumbsup \
+	docker run -t \
+		-v "$$(pwd):/work" \
+		-v /etc/localtime:/etc/localtime \
+		-u $$(id -u):$$(id -g) \
+		ghcr.io/thumbsup/thumbsup \
+		thumbsup \
 		--sort-albums-by title \
 		--sort-albums-direction desc \
 		--theme flow \
 		--cleanup true \
-		--input albums --output .
+		--input /work/albums --output /work/
