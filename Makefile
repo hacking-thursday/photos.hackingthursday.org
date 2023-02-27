@@ -1,5 +1,6 @@
 build:
 	rm *.html >&/dev/null || true
+	rm *.log >&/dev/null || true
 	docker run -t \
 		-v "$$(pwd):/work" \
 		-v /etc/localtime:/etc/localtime \
@@ -11,3 +12,4 @@ build:
 		--theme flow \
 		--cleanup true \
 		--input /work/albums --output /work/
+	@cat *.log
