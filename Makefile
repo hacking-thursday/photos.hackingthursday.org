@@ -1,4 +1,5 @@
 build:
+	rm *.html >&/dev/null || true
 	docker run -t \
 		-v "$$(pwd):/work" \
 		-v /etc/localtime:/etc/localtime \
