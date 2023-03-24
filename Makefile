@@ -9,7 +9,7 @@ build:
 		thumbsup \
 		--sort-albums-by title \
 		--sort-albums-direction desc \
-		--theme flow \
+		--theme cards \
 		--cleanup true \
 		--input /work/albums --output /work/
 	@cat *.log
