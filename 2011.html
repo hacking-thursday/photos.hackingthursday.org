@@ -6,15 +6,14 @@
       <meta name="viewport" content="width=device-width, user-scalable=no" />
       <title>Photo album - 2011</title>
       <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
-      <link rel="stylesheet" href="public/lightslider/css/lightslider.min.css" />
       <link rel="stylesheet" href="public/videojs/video-js.min.css" />
       <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
       <link rel="stylesheet" href="public/core.css" />
       <link rel="stylesheet" href="public/theme.css" />
-      <link rel="stylesheet" href="public/justifiedgallery/justifiedGallery.min.css" />
   </head>
 
   <body>
+
     
     <div id="container">
     
@@ -32,45 +31,40 @@
     <a class="breadcrumb-item" href="index.html">Home</a>&nbsp;/&nbsp;<a class="breadcrumb-item" href="2011.html">2011</a>
       </nav>
     
-    
       <!--
         Nested albums, if any
       -->
-      <div id="albums" class="justified-gallery">
-            <a href="2011-2011-11-10_ODROID_Robot_Kit.html">
-              <img src="media/small/2011/2011-11-10_ODROID_Robot_Kit/10_davidwu.jpg" alt="">
-              <div class="caption" style="display: inline-block">
-                <h3>2011-11-10_ODROID_Robot_Kit</h3>
-                <div class="summary">30 photos</div>
-              </div>
-            </a>
-            <a href="2011-2011-10-27.html">
-              <img src="media/small/2011/2011-10-27/1_davidwu_rex.jpg" alt="">
-              <div class="caption" style="display: inline-block">
-                <h3>2011-10-27</h3>
-                <div class="summary">6 photos</div>
-              </div>
-            </a>
-            <a href="2011-2011-03-03_Clyde%E7%95%B6%E5%85%B5%E5%89%8D%E7%B4%80%E5%BF%B5%E7%95%99%E5%BD%B1.html">
-              <img src="media/small/2011/2011-03-03_Clyde%E7%95%B6%E5%85%B5%E5%89%8D%E7%B4%80%E5%BF%B5%E7%95%99%E5%BD%B1/2011-03-03%2022.46.28_mat.jpg" alt="">
-              <div class="caption" style="display: inline-block">
-                <h3>2011-03-03_Clyde當兵前紀念留影</h3>
-                <div class="summary">3 photos</div>
-              </div>
-            </a>
-            <a href="2011-2011-02-15_Tossug%E6%9C%83%E5%BE%8C%E8%B7%9Fkanru%E5%BC%84ucimf-chewing%E6%A8%A1%E7%B5%84.html">
-              <img src="media/small/2011/2011-02-15_Tossug%E6%9C%83%E5%BE%8C%E8%B7%9Fkanru%E5%BC%84ucimf-chewing%E6%A8%A1%E7%B5%84/2011-02-15%2023.16.07_mat.jpg" alt="">
-              <div class="caption" style="display: inline-block">
-                <h3>2011-02-15_Tossug會後跟kanru弄ucimf-chewing模組</h3>
-                <div class="summary">7 photos</div>
-              </div>
-            </a>
-      </div>
+      <div id="albums">
+    <a href="2011-2011-11-10_ODROID_Robot_Kit.html" style="background-image: url('media/small/2011/2011-11-10_ODROID_Robot_Kit/10_davidwu.jpg')">
+            <div class="info">
+              <h3>2011-11-10_ODROID_Robot_Kit</h3>
+              <div class="summary">30 photos</div>
+              <div class="date">24 Feb 2023 - 24 Feb 2023</div>
+            </div>
+          </a><a href="2011-2011-10-27.html" style="background-image: url('media/small/2011/2011-10-27/1_davidwu_rex.jpg')">
+            <div class="info">
+              <h3>2011-10-27</h3>
+              <div class="summary">6 photos</div>
+              <div class="date">24 Feb 2023 - 24 Feb 2023</div>
+            </div>
+          </a><a href="2011-2011-03-03_Clyde%E7%95%B6%E5%85%B5%E5%89%8D%E7%B4%80%E5%BF%B5%E7%95%99%E5%BD%B1.html" style="background-image: url('media/small/2011/2011-03-03_Clyde%E7%95%B6%E5%85%B5%E5%89%8D%E7%B4%80%E5%BF%B5%E7%95%99%E5%BD%B1/2011-03-03%2022.46.28_mat.jpg')">
+            <div class="info">
+              <h3>2011-03-03_Clyde當兵前紀念留影</h3>
+              <div class="summary">3 photos</div>
+              <div class="date">03 Mar 2011 - 03 Mar 2011</div>
+            </div>
+          </a><a href="2011-2011-02-15_Tossug%E6%9C%83%E5%BE%8C%E8%B7%9Fkanru%E5%BC%84ucimf-chewing%E6%A8%A1%E7%B5%84.html" style="background-image: url('media/small/2011/2011-02-15_Tossug%E6%9C%83%E5%BE%8C%E8%B7%9Fkanru%E5%BC%84ucimf-chewing%E6%A8%A1%E7%B5%84/2011-02-15%2023.16.07_mat.jpg')">
+            <div class="info">
+              <h3>2011-02-15_Tossug會後跟kanru弄ucimf-chewing模組</h3>
+              <div class="summary">7 photos</div>
+              <div class="date">15 Feb 2011 - 15 Feb 2011</div>
+            </div>
+          </a>  </div>
     
       <!--
         All photos and videos
       -->
-      <ul id="media" class="clearfix justified-gallery">
+      <ul id="media" class="clearfix">
       </ul>
     
       <!--
@@ -80,6 +74,7 @@
       <!--
         Zip file link
       -->
+    
     
       <!--
         Optional footer
@@ -96,13 +91,11 @@
     <script src="public/videojs/video.min.js"></script>
     <!-- LightGallery -->
     <script src="public/lightgallery/js/lightgallery.js"></script>
-    <script src="public/lightslider/js/lightslider.min.js"></script>
     <script src="public/lightgallery/js/lg-autoplay.js"></script>
     <script src="public/lightgallery/js/lg-pager.js"></script>
     <script src="public/lightgallery/js/lg-thumbnail.js"></script>
     <script src="public/lightgallery/js/lg-video.js"></script>
     <script src="public/lightgallery/js/lg-exif.min.js"></script>
-    <script src="public/justifiedgallery/jquery.justifiedGallery.min.js"></script>
 
     <script>
       $(document).ready(function() {
@@ -112,28 +105,10 @@
           loop : false,
           download: true,
           counter: true,
-          videojs: true,
-          exThumbImage: 'data-exthumbimage',
-        });
-
-        // Init justified gallery for albums
-        $("#albums").justifiedGallery({
-          margins: 10,
-          rowHeight: 300,
-          maxRowHeight: 325,
-        });
-
-        // Init justified gallery for photos
-        $("#media").justifiedGallery({
-          selector: '.albumList',
-          waitThumbnailsLoad: false,
-          margins: 10,
-          rowHeight: 250,
-          maxRowHeight: 275,
+          videojs: true
         });
       });
     </script>
-
 
 
   </body>

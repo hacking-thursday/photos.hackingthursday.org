@@ -6,15 +6,14 @@
       <meta name="viewport" content="width=device-width, user-scalable=no" />
       <title>Photo album - 2017-09-21</title>
       <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
-      <link rel="stylesheet" href="public/lightslider/css/lightslider.min.css" />
       <link rel="stylesheet" href="public/videojs/video-js.min.css" />
       <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
       <link rel="stylesheet" href="public/core.css" />
       <link rel="stylesheet" href="public/theme.css" />
-      <link rel="stylesheet" href="public/justifiedgallery/justifiedGallery.min.css" />
   </head>
 
   <body>
+
     
     <div id="container">
     
@@ -32,45 +31,59 @@
     <a class="breadcrumb-item" href="index.html">Home</a>&nbsp;/&nbsp;<a class="breadcrumb-item" href="2017.html">2017</a>&nbsp;/&nbsp;<a class="breadcrumb-item" href="2017-2017-09-21.html">2017-09-21</a>
       </nav>
     
-    
       <!--
         Nested albums, if any
       -->
-      <div id="albums" class="justified-gallery">
+      <div id="albums">
       </div>
     
       <!--
         All photos and videos
       -->
-      <ul id="media" class="clearfix justified-gallery">
+      <ul id="media" class="clearfix">
           
-          <div class="albumList"
-              data-sub-html=""
-              data-download-url="media/large/2017/2017-09-21/1_yan.jpg"data-src="media/large/2017/2017-09-21/1_yan.jpg"data-exthumbimage="media/thumbs/2017/2017-09-21/1_yan.jpg"data-filename="1_yan.jpg"><a href="media/large/2017/2017-09-21/1_yan.jpg"><img
-                      src="media/small/2017/2017-09-21/1_yan.jpg"
-                      width="400"
-                      height="300"alt="1_yan.jpg"/>
+            <li data-src="media/large/2017/2017-09-21/1_yan.jpg"
+                data-sub-html=""
+                data-download-url="media/large/2017/2017-09-21/1_yan.jpg"
+                
+                data-filename="1_yan.jpg"
+          
+              >
+              <a href="media/large/2017/2017-09-21/1_yan.jpg">
+                <img src="media/thumbs/2017/2017-09-21/1_yan.jpg"
+                     width="120"
+                     height="120"
+                     alt="1_yan.jpg" />
               </a>
+            </li>      
+            <li data-src="media/large/2017/2017-09-21/2_yan.jpg"
+                data-sub-html=""
+                data-download-url="media/large/2017/2017-09-21/2_yan.jpg"
+                
+                data-filename="2_yan.jpg"
           
-          </div>      
-          <div class="albumList"
-              data-sub-html=""
-              data-download-url="media/large/2017/2017-09-21/2_yan.jpg"data-src="media/large/2017/2017-09-21/2_yan.jpg"data-exthumbimage="media/thumbs/2017/2017-09-21/2_yan.jpg"data-filename="2_yan.jpg"><a href="media/large/2017/2017-09-21/2_yan.jpg"><img
-                      src="media/small/2017/2017-09-21/2_yan.jpg"
-                      width="225"
-                      height="300"alt="2_yan.jpg"/>
+              >
+              <a href="media/large/2017/2017-09-21/2_yan.jpg">
+                <img src="media/thumbs/2017/2017-09-21/2_yan.jpg"
+                     width="120"
+                     height="120"
+                     alt="2_yan.jpg" />
               </a>
+            </li>      
+            <li data-src="media/large/2017/2017-09-21/3_yan.jpg"
+                data-sub-html=""
+                data-download-url="media/large/2017/2017-09-21/3_yan.jpg"
+                
+                data-filename="3_yan.jpg"
           
-          </div>      
-          <div class="albumList"
-              data-sub-html=""
-              data-download-url="media/large/2017/2017-09-21/3_yan.jpg"data-src="media/large/2017/2017-09-21/3_yan.jpg"data-exthumbimage="media/thumbs/2017/2017-09-21/3_yan.jpg"data-filename="3_yan.jpg"><a href="media/large/2017/2017-09-21/3_yan.jpg"><img
-                      src="media/small/2017/2017-09-21/3_yan.jpg"
-                      width="400"
-                      height="300"alt="3_yan.jpg"/>
+              >
+              <a href="media/large/2017/2017-09-21/3_yan.jpg">
+                <img src="media/thumbs/2017/2017-09-21/3_yan.jpg"
+                     width="120"
+                     height="120"
+                     alt="3_yan.jpg" />
               </a>
-          
-          </div>  </ul>
+            </li>  </ul>
     
       <!--
         Pagination
@@ -79,6 +92,7 @@
       <!--
         Zip file link
       -->
+    
     
       <!--
         Optional footer
@@ -95,13 +109,11 @@
     <script src="public/videojs/video.min.js"></script>
     <!-- LightGallery -->
     <script src="public/lightgallery/js/lightgallery.js"></script>
-    <script src="public/lightslider/js/lightslider.min.js"></script>
     <script src="public/lightgallery/js/lg-autoplay.js"></script>
     <script src="public/lightgallery/js/lg-pager.js"></script>
     <script src="public/lightgallery/js/lg-thumbnail.js"></script>
     <script src="public/lightgallery/js/lg-video.js"></script>
     <script src="public/lightgallery/js/lg-exif.min.js"></script>
-    <script src="public/justifiedgallery/jquery.justifiedGallery.min.js"></script>
 
     <script>
       $(document).ready(function() {
@@ -111,28 +123,10 @@
           loop : false,
           download: true,
           counter: true,
-          videojs: true,
-          exThumbImage: 'data-exthumbimage',
-        });
-
-        // Init justified gallery for albums
-        $("#albums").justifiedGallery({
-          margins: 10,
-          rowHeight: 300,
-          maxRowHeight: 325,
-        });
-
-        // Init justified gallery for photos
-        $("#media").justifiedGallery({
-          selector: '.albumList',
-          waitThumbnailsLoad: false,
-          margins: 10,
-          rowHeight: 250,
-          maxRowHeight: 275,
+          videojs: true
         });
       });
     </script>
-
 
 
   </body>

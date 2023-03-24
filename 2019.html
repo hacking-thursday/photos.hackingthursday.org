@@ -6,15 +6,14 @@
       <meta name="viewport" content="width=device-width, user-scalable=no" />
       <title>Photo album - 2019</title>
       <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
-      <link rel="stylesheet" href="public/lightslider/css/lightslider.min.css" />
       <link rel="stylesheet" href="public/videojs/video-js.min.css" />
       <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
       <link rel="stylesheet" href="public/core.css" />
       <link rel="stylesheet" href="public/theme.css" />
-      <link rel="stylesheet" href="public/justifiedgallery/justifiedGallery.min.css" />
   </head>
 
   <body>
+
     
     <div id="container">
     
@@ -32,31 +31,28 @@
     <a class="breadcrumb-item" href="index.html">Home</a>&nbsp;/&nbsp;<a class="breadcrumb-item" href="2019.html">2019</a>
       </nav>
     
-    
       <!--
         Nested albums, if any
       -->
-      <div id="albums" class="justified-gallery">
-            <a href="2019-2019-01-10.html">
-              <img src="media/small/2019/2019-01-10/5_yan.jpg" alt="">
-              <div class="caption" style="display: inline-block">
-                <h3>2019-01-10</h3>
-                <div class="summary">3 photos</div>
-              </div>
-            </a>
-            <a href="2019-2019-01-05.html">
-              <img src="media/small/2019/2019-01-05/4_yan.jpg" alt="">
-              <div class="caption" style="display: inline-block">
-                <h3>2019-01-05</h3>
-                <div class="summary">1 photo</div>
-              </div>
-            </a>
-      </div>
+      <div id="albums">
+    <a href="2019-2019-01-10.html" style="background-image: url('media/small/2019/2019-01-10/5_yan.jpg')">
+            <div class="info">
+              <h3>2019-01-10</h3>
+              <div class="summary">3 photos</div>
+              <div class="date">24 Feb 2023 - 24 Feb 2023</div>
+            </div>
+          </a><a href="2019-2019-01-05.html" style="background-image: url('media/small/2019/2019-01-05/4_yan.jpg')">
+            <div class="info">
+              <h3>2019-01-05</h3>
+              <div class="summary">1 photo</div>
+              <div class="date">24 Feb 2023 - 24 Feb 2023</div>
+            </div>
+          </a>  </div>
     
       <!--
         All photos and videos
       -->
-      <ul id="media" class="clearfix justified-gallery">
+      <ul id="media" class="clearfix">
       </ul>
     
       <!--
@@ -66,6 +62,7 @@
       <!--
         Zip file link
       -->
+    
     
       <!--
         Optional footer
@@ -82,13 +79,11 @@
     <script src="public/videojs/video.min.js"></script>
     <!-- LightGallery -->
     <script src="public/lightgallery/js/lightgallery.js"></script>
-    <script src="public/lightslider/js/lightslider.min.js"></script>
     <script src="public/lightgallery/js/lg-autoplay.js"></script>
     <script src="public/lightgallery/js/lg-pager.js"></script>
     <script src="public/lightgallery/js/lg-thumbnail.js"></script>
     <script src="public/lightgallery/js/lg-video.js"></script>
     <script src="public/lightgallery/js/lg-exif.min.js"></script>
-    <script src="public/justifiedgallery/jquery.justifiedGallery.min.js"></script>
 
     <script>
       $(document).ready(function() {
@@ -98,28 +93,10 @@
           loop : false,
           download: true,
           counter: true,
-          videojs: true,
-          exThumbImage: 'data-exthumbimage',
-        });
-
-        // Init justified gallery for albums
-        $("#albums").justifiedGallery({
-          margins: 10,
-          rowHeight: 300,
-          maxRowHeight: 325,
-        });
-
-        // Init justified gallery for photos
-        $("#media").justifiedGallery({
-          selector: '.albumList',
-          waitThumbnailsLoad: false,
-          margins: 10,
-          rowHeight: 250,
-          maxRowHeight: 275,
+          videojs: true
         });
       });
     </script>
-
 
 
   </body>
