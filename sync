@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+ROOT_DIR=$(readlink -f "$(dirname $0)")
+UPLOAD_DIR="$ROOT_DIR/UPLOADS"
+ALBUM_DIR="$ROOT_DIR/albums"
+
+list_dir() {
+	local DIR_PATH="$1"
+	(
+		cd "$DIR_PATH" >&/dev/null || exit
+		find . -maxdepth 1 -type d | grep -v -e "^\.$" | sed -e "s/^\.\///g" | sort
+	)
+}
+
+(
+	cd "$ALBUM_DIR" >&/dev/null || exit
+
+	list_dir "$UPLOAD_DIR" | while read -r item; do
+		echo "==== $item ===="
+
+		if [ -e "$item" ]; then
+			echo "[SKIP] $item already exists."
+			continue
+		else
+			(
+				rsync -avz "$UPLOAD_DIR/$item/" "./$item/" &&
+					git add "./$item" &&
+					git commit -s -m "Add photos of $item" || exit 1
+
+				cd $ROOT_DIR
+				make
+				git add *.html media/
+				git commit -s -m "Update" || exit 1
+			) || {
+				echo "[ERR] Processing $item failed."
+				exit
+			}
+		fi
+	done
+)
